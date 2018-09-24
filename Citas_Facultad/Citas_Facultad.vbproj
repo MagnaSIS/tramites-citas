@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{1BCB70E2-9794-4A52-A98B-05080B884C9F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Citas_Facultad</RootNamespace>
+    <AssemblyName>Citas_Facultad</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Citas_Facultad.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Citas_Facultad.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="fmdev.ResX, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\fmdev.ResX.0.3.2\lib\net45\fmdev.ResX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\ajustes_avanzados.aspx" />
+    <Content Include="admin\añadir_disp_tramite.aspx" />
+    <Content Include="admin\añadir_empleado.aspx" />
+    <Content Include="admin\añadir_secre_tramite.aspx" />
+    <Content Include="admin\añadir_tramite.aspx" />
+    <Content Include="admin\default.aspx" />
+    <Content Include="admin\eliminar_horario.aspx" />
+    <Content Include="admin\gestionar_citas.aspx" />
+    <Content Include="admin\gestionar_empleados.aspx" />
+    <Content Include="admin\gestionar_horario_dia.aspx" />
+    <Content Include="admin\gestionar_horario_dias.aspx" />
+    <Content Include="admin\gestionar_tramites.aspx" />
+    <Content Include="admin\imprimir_historial.aspx" />
+    <Content Include="admin\modificar_disp_tramites.aspx" />
+    <Content Include="admin\modificar_secre_tramite.aspx" />
+    <Content Include="aviso_legal.aspx" />
+    <Content Include="cambiar_password.aspx" />
+    <Content Include="confirmar_empleado.aspx" />
+    <Content Include="confirmar_registro.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\jumbotron-header.css" />
+    <Content Include="Global.asax" />
+    <Content Include="default.aspx" />
+    <Content Include="iniciar_sesion.aspx" />
+    <Content Include="registro.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="MaestraAnon.Master" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="MaestraUsuario.Master" />
+    <Content Include="MaestraAdmin.Master" />
+    <Content Include="admin\gestionar_horario.master" />
+    <Content Include="MaestraSecretario.Master" />
+    <Content Include="admin\Web.config" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="secretaria\cita_previa.aspx" />
+    <Content Include="secretaria\confirmacion.aspx" />
+    <Content Include="secretaria\default.aspx" />
+    <Content Include="secretaria\elegir_tramite.aspx" />
+    <Content Include="secretaria\imprimir_citas.aspx" />
+    <Content Include="secretaria\ver_citas.aspx" />
+    <Content Include="solicitar_cambio.aspx" />
+    <Content Include="usuario\cancelar_cita.aspx" />
+    <Content Include="usuario\cita_previa.aspx" />
+    <Content Include="usuario\confirmacion.aspx" />
+    <Content Include="usuario\default.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\ajustes_avanzados.aspx.designer.vb">
+      <DependentUpon>ajustes_avanzados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajustes_avanzados.aspx.vb">
+      <DependentUpon>ajustes_avanzados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\añadir_disp_tramite.aspx.designer.vb">
+      <DependentUpon>añadir_disp_tramite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\añadir_disp_tramite.aspx.vb">
+      <DependentUpon>añadir_disp_tramite.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\añadir_empleado.aspx.designer.vb">
+      <DependentUpon>añadir_empleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\añadir_empleado.aspx.vb">
+      <DependentUpon>añadir_empleado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\añadir_secre_tramite.aspx.designer.vb">
+      <DependentUpon>añadir_secre_tramite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\añadir_secre_tramite.aspx.vb">
+      <DependentUpon>añadir_secre_tramite.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\añadir_tramite.aspx.designer.vb">
+      <DependentUpon>añadir_tramite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\añadir_tramite.aspx.vb">
+      <DependentUpon>añadir_tramite.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\eliminar_horario.aspx.designer.vb">
+      <DependentUpon>eliminar_horario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\eliminar_horario.aspx.vb">
+      <DependentUpon>eliminar_horario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\gestionar_citas.aspx.designer.vb">
+      <DependentUpon>gestionar_citas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\gestionar_citas.aspx.vb">
+      <DependentUpon>gestionar_citas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\gestionar_empleados.aspx.designer.vb">
+      <DependentUpon>gestionar_empleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\gestionar_empleados.aspx.vb">
+      <DependentUpon>gestionar_empleados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\gestionar_horario.master.designer.vb">
+      <DependentUpon>gestionar_horario.master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\gestionar_horario.master.vb">
+      <DependentUpon>gestionar_horario.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\gestionar_horario_dia.aspx.designer.vb">
+      <DependentUpon>gestionar_horario_dia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\gestionar_horario_dia.aspx.vb">
+      <DependentUpon>gestionar_horario_dia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\gestionar_horario_dias.aspx.designer.vb">
+      <DependentUpon>gestionar_horario_dias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\gestionar_horario_dias.aspx.vb">
+      <DependentUpon>gestionar_horario_dias.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\gestionar_tramites.aspx.designer.vb">
+      <DependentUpon>gestionar_tramites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\gestionar_tramites.aspx.vb">
+      <DependentUpon>gestionar_tramites.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\imprimir_historial.aspx.designer.vb">
+      <DependentUpon>imprimir_historial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\imprimir_historial.aspx.vb">
+      <DependentUpon>imprimir_historial.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\modificar_disp_tramites.aspx.designer.vb">
+      <DependentUpon>modificar_disp_tramites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\modificar_disp_tramites.aspx.vb">
+      <DependentUpon>modificar_disp_tramites.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\modificar_secre_tramite.aspx.designer.vb">
+      <DependentUpon>modificar_secre_tramite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\modificar_secre_tramite.aspx.vb">
+      <DependentUpon>modificar_secre_tramite.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_Data\DataWriter.vb" />
+    <Compile Include="App_Data\DataAccess.vb" />
+    <Compile Include="aviso_legal.aspx.designer.vb">
+      <DependentUpon>aviso_legal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aviso_legal.aspx.vb">
+      <DependentUpon>aviso_legal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="cambiar_password.aspx.designer.vb">
+      <DependentUpon>cambiar_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cambiar_password.aspx.vb">
+      <DependentUpon>cambiar_password.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="confirmar_empleado.aspx.designer.vb">
+      <DependentUpon>confirmar_empleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="confirmar_empleado.aspx.vb">
+      <DependentUpon>confirmar_empleado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="confirmar_registro.aspx.designer.vb">
+      <DependentUpon>confirmar_registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="confirmar_registro.aspx.vb">
+      <DependentUpon>confirmar_registro.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="iniciar_sesion.aspx.designer.vb">
+      <DependentUpon>iniciar_sesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iniciar_sesion.aspx.vb">
+      <DependentUpon>iniciar_sesion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MaestraAdmin.Master.designer.vb">
+      <DependentUpon>MaestraAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaestraAdmin.Master.vb">
+      <DependentUpon>MaestraAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaestraSecretario.Master.designer.vb">
+      <DependentUpon>MaestraSecretario.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaestraSecretario.Master.vb">
+      <DependentUpon>MaestraSecretario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaestraUsuario.Master.designer.vb">
+      <DependentUpon>MaestraUsuario.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaestraUsuario.Master.vb">
+      <DependentUpon>MaestraUsuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MaestraAnon.Master.designer.vb">
+      <DependentUpon>MaestraAnon.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaestraAnon.Master.vb">
+      <DependentUpon>MaestraAnon.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registro.aspx.designer.vb">
+      <DependentUpon>registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registro.aspx.vb">
+      <DependentUpon>registro.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="secretaria\cita_previa.aspx.designer.vb">
+      <DependentUpon>cita_previa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secretaria\cita_previa.aspx.vb">
+      <DependentUpon>cita_previa.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="secretaria\confirmacion.aspx.designer.vb">
+      <DependentUpon>confirmacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secretaria\confirmacion.aspx.vb">
+      <DependentUpon>confirmacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="secretaria\default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secretaria\default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="secretaria\elegir_tramite.aspx.designer.vb">
+      <DependentUpon>elegir_tramite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secretaria\elegir_tramite.aspx.vb">
+      <DependentUpon>elegir_tramite.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="secretaria\imprimir_citas.aspx.designer.vb">
+      <DependentUpon>imprimir_citas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secretaria\imprimir_citas.aspx.vb">
+      <DependentUpon>imprimir_citas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="secretaria\ver_citas.aspx.designer.vb">
+      <DependentUpon>ver_citas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secretaria\ver_citas.aspx.vb">
+      <DependentUpon>ver_citas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="solicitar_cambio.aspx.designer.vb">
+      <DependentUpon>solicitar_cambio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="solicitar_cambio.aspx.vb">
+      <DependentUpon>solicitar_cambio.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="usuario\cancelar_cita.aspx.designer.vb">
+      <DependentUpon>cancelar_cita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usuario\cancelar_cita.aspx.vb">
+      <DependentUpon>cancelar_cita.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="usuario\cita_previa.aspx.designer.vb">
+      <DependentUpon>cita_previa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usuario\cita_previa.aspx.vb">
+      <DependentUpon>cita_previa.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="usuario\confirmacion.aspx.designer.vb">
+      <DependentUpon>confirmacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usuario\confirmacion.aspx.vb">
+      <DependentUpon>confirmacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="usuario\default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usuario\default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="secretaria\Web.config" />
+    <Content Include="usuario\Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Citas\Citas.vbproj">
+      <Project>{5ca5274e-b29e-4b27-8ab1-e65a3bc69f7e}</Project>
+      <Name>Citas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Correo\Correo.vbproj">
+      <Project>{93775cc6-1e78-400d-8fa5-5393ffef5c69}</Project>
+      <Name>Correo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="My Project\PublishProfiles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51154</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51154/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,70 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MaestraAdmin.master.vb" Inherits="Citas_Facultad.MaestraAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/jumbotron-header.css" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <header class="header">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+                    <asp:HyperLink ID="logo" class="navbar-brand" runat="server" NavigateUrl="~/admin/" meta:resourcekey="logoResource1">Título</asp:HyperLink>
+                    <asp:DropDownList ID="ddlLanguage" runat="server"
+                        OnSelectedIndexChanged="ddlLanguage_SelectedIndexChanged"
+                        AutoPostBack="True" meta:resourcekey="ddlLanguageResource1">
+                        <asp:ListItem Text="Español" Value="es-ES" meta:resourcekey="ListItemResource1" />
+                        <asp:ListItem Text="Euskara" Value="eu-ES" meta:resourcekey="ListItemResource2" />
+                    </asp:DropDownList>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <asp:HyperLink ID="HyperLink2" class="nav-link disabled" runat="server" meta:resourcekey="HyperLink2Resource1">Hola administrador</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink ID="pedir_cita" Style="color : white;" runat="server" class="nav-link" NavigateUrl="~/admin/default.aspx" meta:resourcekey="pedir_citaResource1">Gestiones</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:LinkButton ID="cerrar_sesion" Style="color : white;" runat="server" class="nav-link" meta:resourcekey="cerrar_sesionResource1">Cerrar Sesión</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main role="main">
+                <div class="jumbotron">
+                    <asp:ContentPlaceHolder ID="jumbotron" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <asp:ContentPlaceHolder ID="bottom" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-3">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/aviso_legal.aspx" ForeColor="#999999" meta:resourcekey="HyperLink1Resource1">Aviso legal</asp:HyperLink>
+                    </div>
+                    <div class="col-sm-7" style="text-align: right;">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http://magnasis.com" ForeColor="#999999">MagnaSIS&copy;</asp:HyperLink>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </form>
+    
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>
