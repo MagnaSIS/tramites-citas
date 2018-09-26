@@ -4,7 +4,7 @@ Proyecto de MagnaSIS en el que se implementa un servicio para manejar trámites 
 Otros idiomas/Other languages: [Inglés/English](README.en.md)
 
 ## Base de datos
-Este proyecto está preparado para trabajar con una base de datos MySQL. Tanto los métodos de las dos clases, como los accesos mediante los SqlDataSource. Habría que editar las dos clases de acceso a base de datos así como el archivo *Web.config* de la raíz de *Citas_Facultad* y escribir el string de conexión.
+Este proyecto está preparado para trabajar con una base de datos MySQL, tanto los métodos de las dos clases como los accesos mediante los SqlDataSource. Habría que editar las dos clases de acceso a base de datos así como el archivo *Web.config* de la raíz de *Citas_Facultad* y escribir el string de conexión.
 Para que esto funcione, se han usado **MySQL for Visual Studio 1.2.8** y **MySQL Connector Net 6.9.12**. Es posible que, si se usa una versión diferente, no funcione correctamente.
 
 ## Traducciones
